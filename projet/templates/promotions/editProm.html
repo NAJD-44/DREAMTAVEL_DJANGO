@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container py-2" style="margin-top:13%" >
+    <h4>UPDATE PROMOTION</h4>
+<form method="POST" enctype="multipart/form-data" action="../../updatePromotion/{{Promotiondata.id}}/">
+    {% csrf_token %}
+    <label class="form-label">Title:</label>
+    <input type="text" class="form-control" name="titre">
+    <label class="form-label">Validite:</label>
+    <input type="text" class="form-control" name="validite">
+    <label class="form-label">Description</label>
+    <textarea class="form-control" name="description"></textarea>
+        <input type="submit" value="UPDATE PROMOTION" class="btn btn-primary my-2" name="update">
+    </form>
+</div>
+{% endblock  %}
+

@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<nav class="navbar-nav navbar-expand-lg fixed-top " style="background-color:black">
+    <div class="container text-center">
+        <div class=" navbar-collapse">
+            <div class="col-3 d-flex">
+                <div class="col ">
+                    <a  href="">Home</a>
+                </div>
+                <div class="col">
+                    <a  href="">About us</a>
+                </div>
+                <div class="col">
+                    <div class="dropdown">
+                        <a href="">Categories</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <img src="{% static "image/LOGOPFA.png" %}" width="20%" height="20%" alt="logo">
+            </div>
+            <div class="col-3 d-flex">
+                <div class="col">
+                    <a  href="#">LOG IN</a>
+                </div>
+                <div class="col">
+                    <a  href="#">SIGN UP</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</nav>

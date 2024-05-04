@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container py-2" style="margin-top:13%" >
+    <h4>ADD EVENT</h4>
+<form method="POST" enctype="multipart/form-data" action="insertEvent">
+    {% csrf_token %}
+    <label class="form-label">Image:</label>
+        <input type="file" class="form-control" name="image">
+        <label class="form-label">Title:</label>
+        <input type="text" class="form-control" name="title">
+        <label class="form-label">Description</label>
+        <textarea class="form-control" name="description"></textarea>
+        <label class="form-label">location</label>
+        <textarea class="form-control" name="location"></textarea>
+        <label class="form-label">Price:</label>
+        <input type="number" class="form-control" step="0.1" name="price" min="0">
+        <input type="submit" value="ADD EVENT" class="btn btn-primary my-2" name="add">
+    </form>
+</div>
+{% endblock  %}
+

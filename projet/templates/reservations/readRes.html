@@ -1,0 +1,30 @@
+{% extends "admin.html" %}
+{% block read %}
+{% csrf_token %}
+<center style="margin-bottom:10%">
+    <h2 style="margin-top:11%;">LIST OF RESERVATIONS</h2>
+   <a href="../createReservation"> <button type="button" class="btn btn-success" style="margin-right:72%;">ADD Reservation</button></a>
+    <table>
+        <thead>
+            <tr>
+                <th>Reservation Id</th>
+                <th>Reservation Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in Reservationdata %}
+            <tr>
+                <td>{{ a.id }}</td>
+                <td>{{ a.date_reservation }}</td>
+                <td>
+                    <a  href="../edit/{{a.id}}" class="btn-edit">Edit</a>
+                    <a  href="../deleteReservation/{{a.id}}" class="btn-delete">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</center>
+{% endblock  %}
+

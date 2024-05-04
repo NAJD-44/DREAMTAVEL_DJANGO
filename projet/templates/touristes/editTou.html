@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container py-2" style="margin-top:13%" >
+    <h4>UPDATE TOURISTE</h4>
+<form method="POST" enctype="multipart/form-data" action="../../updateTouriste/{{Touristedata.id}}/">
+    {% csrf_token %}
+    <label class="form-label" for="fname">First Name:</label>
+    <input value="" type="text" id="fname" name="fname" class="form-control" />
+    <label class="form-label" for="lname">Last Name:</label>
+    <input value=""  type="text" id="lname" name="lname" class="form-control" />
+    <label class="form-label" for="email">Email:</label>
+    <input  value="" type="text" id="email" name="email" class="form-control " />
+    <label class="form-label" for="password">Password:</label>
+    <input type="password" id="password" name="password" class="form-control" />
+    <input type="submit" value="UPDATE TOURISTE" class="btn btn-primary my-2" name="update">
+    </form>
+</div>
+{% endblock  %}
+

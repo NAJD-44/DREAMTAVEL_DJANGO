@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container py-2" style="margin-top:13%" >
+    <h4>UPDATE RESERVATION</h4>
+<form method="POST" enctype="multipart/form-data" action="../../updateReservation/{{Reservationdata.id}}/">
+    {% csrf_token %}
+        <label class="form-label">Date Reseravtion:</label>
+        <input type="date" class="form-control" name="dateres">
+        
+        <input type="submit" value="UPDATE RESERVATION" class="btn btn-primary my-2" name="update">
+    </form>
+</div>
+{% endblock  %}
+

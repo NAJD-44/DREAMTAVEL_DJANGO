@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container py-2" style="margin-top:13%" >
+    <h4>ADD Destination</h4>
+<form method="POST" enctype="multipart/form-data" action="../insertDestination">
+    {% csrf_token %}
+    <label class="form-label">Image:</label>
+        <input type="file" class="form-control" name="image">
+        <label class="form-label">Name:</label>
+        <input type="text" class="form-control" name="name">
+        <label class="form-label">Content</label>
+        <textarea class="form-control" name="content"></textarea>
+        <input type="submit" value="ADD DESTINATION" class="btn btn-primary my-2" name="add">
+    </form>
+</div>
+{% endblock content %}
+
